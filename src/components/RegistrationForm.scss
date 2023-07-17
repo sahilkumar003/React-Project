@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$font-family: "Poppins", sans-serif;
+$first-color: #4d47c3;
+$second-color: #a7a3ff;
+$background-color: #f0efff;
+
+@mixin form-style {
+  position: absolute;
+  width: 369px;
+  height: 700px;
+  margin: 0 auto;
+  left: 1000px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  font-family: $font-family;
+
+  .text {
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 20px 30px;
+    }
+  }
+
+  .headingtext {
+    position: relative;
+    bottom: 80px;
+    left: 40px;
+
+    .text1 {
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 75px;
+    }
+
+    .text2 {
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 52px;
+    }
+
+    .text3 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 40px;
+    }
+
+    .text4 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: $first-color;
+      padding-left: 8px;
+      cursor: pointer;
+    }
+
+    .bottomtext {
+      margin-top: 50px;
+    }
+  }
+
+  .imagediv {
+    display: flex;
+    position: relative;
+    top: 160px;
+    left: 200px;
+  }
+
+  .registration-form {
+    @include form-style;
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 10px;
+
+        input {
+          width: 300px;
+          height: 37px;
+          padding: 8px;
+          border-radius: 8px;
+          border: 2px solid $background-color;
+          color: $second-color;
+          background: $background-color;
+
+          &::placeholder {
+            color: $second-color;
+            font-size: 16px;
+            padding-left: 10px;
+          }
+
+          &#dob {
+            font-size: 16px;
+          }
+        }
+      }
+
+      button[type="submit"] {
+        padding: 20px 135px;
+        background-color: #4caf50;
+        color: #fff;
+        background: $first-color;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 4px 61px 0px #4d47c366;
+      }
+    }
+  }
+}
